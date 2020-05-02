@@ -1,4 +1,4 @@
-# Project: Song Play Analysis With RDBMS  
+# Project: Sparkify-data-modeling 
 [![Project Passed](https://img.shields.io/badge/project-passed-success.svg)](https://img.shields.io/badge/project-passed-success.svg)
 
 ## Summary
