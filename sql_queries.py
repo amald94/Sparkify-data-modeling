@@ -11,28 +11,28 @@ time_table_drop = "DROP TABLE IF EXISTS time"
 songplay_table_create = (""" CREATE TABLE songplays (
 songplay_id SERIAL,
 start_time TIMESTAMP REFERENCES time(start_time),
-user_id VARCHAR(50) REFERENCES users(user_id), 
-level VARCHAR(50), 
+user_id VARCHAR(100) REFERENCES users(user_id), 
+level VARCHAR(100), 
 song_id VARCHAR(100) REFERENCES songs(song_id), 
 artist_id VARCHAR(100) REFERENCES artists(artist_id), 
 session_id BIGINT, 
-location VARCHAR(255), 
+location VARCHAR(100), 
 user_agent TEXT, 
 PRIMARY KEY (songplay_id))
 """)
 
 user_table_create = (""" CREATE TABLE users (
 user_id VARCHAR, 
-firstName VARCHAR(255), 
-lastName VARCHAR(255), 
+firstName VARCHAR(100), 
+lastName VARCHAR(100), 
 gender VARCHAR(1),
-level VARCHAR(50), 
+level VARCHAR(100), 
 PRIMARY KEY (user_id))
 """)
 
 song_table_create = (""" CREATE TABLE songs(
 song_id VARCHAR(100),
-title VARCHAR(255),
+title VARCHAR(100),
 artist_id VARCHAR(100),
 year INTEGER,
 duration DOUBLE PRECISION,
@@ -41,8 +41,8 @@ PRIMARY KEY (song_id))
 
 artist_table_create = (""" CREATE TABLE artists(
 artist_id VARCHAR(100),
-name VARCHAR(255),
-location VARCHAR(255),
+name VARCHAR(100),
+location VARCHAR(100),
 latitude DOUBLE PRECISION,
 longitude DOUBLE PRECISION,
 PRIMARY KEY (artist_id))
